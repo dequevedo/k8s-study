@@ -1,0 +1,31 @@
+### Kubernetes Cheat Sheet
+
+Listar todos os pods em todos os namespaces
+kubectl get pods --all-namespaces
+
+Obter detalhes de um pod específico
+kubectl describe pod <nome-do-pod>
+
+Criar um deployment a partir de um arquivo YAML
+kubectl apply -f <arquivo.yaml>
+
+Escalar um deployment para um número específico de réplicas
+kubectl scale deployment <nome-do-deployment> --replicas=<número-de-réplicas>
+
+Verificar os logs de um pod específico
+kubectl logs <nome-do-pod>
+
+Entrar em um pod em execução com um shell interativo
+kubectl exec -it <nome-do-pod> -- /bin/bash
+
+Remover um pod específico
+kubectl delete pod <nome-do-pod>
+
+Listar todos os serviços em um namespace
+kubectl get services -n <nome-do-namespace>
+
+Obter a configuração de um recurso específico em YAML
+kubectl get <tipo-do-recurso> <nome-do-recurso> -o yaml
+
+Verificar a configuração de um contexto atual
+kubectl config view --minify
