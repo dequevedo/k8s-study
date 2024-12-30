@@ -1,3 +1,18 @@
+### How to run the Application using K8s
+1. Build docker image
+```docker build -t my-nginx:1.0 .```
+
+2. Apply Everything
+```
+kubectl apply -f nginx-deployment.yaml
+kubectl apply -f nginx-service.yaml
+kubectl apply -f nginx-ingress.yaml
+```
+
+
+### How to reapply a Deployment
+```kubectl rollout restart deployment nginx-deployment```
+
 ### Kubernetes Cheat Sheet
 
 Listar todos os pods em todos os namespaces
@@ -17,6 +32,7 @@ kubectl logs <nome-do-pod>
 
 Entrar em um pod em execução com um shell interativo
 kubectl exec -it <nome-do-pod> -- /bin/bash
+kubectl exec -it <nome-do-pod> sh
 
 Remover um pod específico
 kubectl delete pod <nome-do-pod>
